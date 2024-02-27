@@ -5,6 +5,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Stack;
 
+/**
+ * This Java class reads an infix expression from a file, converts it to postfix notation, evaluates
+ * the expression using a calculator singleton, and prints the result.
+ */
 public class CalculatorProgram {
     public static void main(String[] args) {
         // Lectura de la expresión infix desde datos.txt
@@ -29,6 +33,9 @@ public class CalculatorProgram {
         System.out.println("El resultado de la expresión infix " + infixExpression + " es: " + result);
     }
 
+    // The `readInfixExpressionFromFile` method in the Java class `CalculatorProgram` is responsible
+    // for reading an infix expression from a file. Here's a breakdown of what it does:
+    // The code snippet provided contains two methods in the `CalculatorProgram` Java class:
     // Método para leer la expresión infix desde el archivo
     private static String readInfixExpressionFromFile(String filename) {
         StringBuilder expression = new StringBuilder();
@@ -70,6 +77,9 @@ public class CalculatorProgram {
         return postfix.toString();
     }
 
+    // The method `precedence(char operator)` in the Java class `CalculatorProgram` is determining the
+    // precedence level of an operator in the context of converting an infix expression to postfix
+    // notation using the Shunting Yard algorithm.
     // Método para obtener la precedencia de un operador
     private static int precedence(char operator) {
         if (operator == '+' || operator == '-') {
