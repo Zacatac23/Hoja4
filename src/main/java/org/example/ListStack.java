@@ -1,8 +1,6 @@
 package org.example;
 
-import java.util.Stack;
-
-public class ListStack<T> extends Stack<T> {
+public class ListStack<T> implements UVGStack<T> {
     private final java.util.Stack<T> items;
 
     public ListStack() {
@@ -36,5 +34,10 @@ public class ListStack<T> extends Stack<T> {
         } else {
             throw new UnsupportedOperationException("peek from empty stack");
         }
+    }
+
+    @Override
+    public int size() {
+        return items.size();
     }
 }

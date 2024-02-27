@@ -7,13 +7,9 @@ import java.util.ArrayList;
  *
  * @param <T> the type of elements in the stack
  */
-public class ArrayListStack<T> implements Stack<T> {
+public class ArrayListStack<T> implements UVGStack<T> {
 
-    private final ArrayList<T> stack;
-
-    public ArrayListStack() {
-        stack = new ArrayList<>();
-    }
+    private final ArrayList<T> stack = new ArrayList<T>();
 
     @Override
     public T push(T item) {

@@ -1,6 +1,6 @@
 package org.example;
 
-public interface Stack<T> {
+public interface UVGStack<T>{
     boolean isEmpty();
     T push(T item);
     T pop();

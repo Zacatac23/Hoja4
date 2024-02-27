@@ -1,6 +1,5 @@
 package org.example;
-import java.util.Stack;
-public class VectorStack<T> extends Stack<T> {
+public class VectorStack<T> implements UVGStack<T> {
     private java.util.Vector<T> items;
 
     public VectorStack() {
@@ -34,5 +33,10 @@ public class VectorStack<T> extends Stack<T> {
         } else {
             throw new UnsupportedOperationException("peek from empty stack");
         }
+    }
+
+    @Override
+    public int size() {
+        return items.size();
     }
 }

@@ -1,7 +1,7 @@
 package org.example;
 
 public class Calculator {
-    public int evaluateExpression(String postfixExpression, Stack<Integer> stack, List<Integer> list) {
+    public int evaluateExpression(String postfixExpression, UVGStack<Integer> stack, List<Integer> list) {
         for (char symbol : postfixExpression.toCharArray()) {
             if (Character.isDigit(symbol)) {
                 stack.push(Character.getNumericValue(symbol));

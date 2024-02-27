@@ -1,5 +1,4 @@
 package org.example;
-import java.util.List;
 
 class ListFactory<T> {
     public List<T> createList(String implementation) {

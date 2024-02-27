@@ -3,10 +3,7 @@ package org.example;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Stack;
-
 
 public class CalculatorProgram {
     public static void main(String[] args) {
@@ -18,7 +15,7 @@ public class CalculatorProgram {
         String listImplementation = "SinglyLinkedList";
 
         // Creación de la Pila y la Lista utilizando el patrón Factory
-        Stack<Integer> stack = new StackFactory<Integer>().createStack(stackImplementation);
+        UVGStack<Integer> stack = new StackFactory<Integer>().createStack(stackImplementation);
         List<Integer> list = new ListFactory<Integer>().createList(listImplementation);
 
         // Calculadora Singleton

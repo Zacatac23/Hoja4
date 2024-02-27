@@ -2,9 +2,6 @@ package org.example;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-
 import static org.junit.Assert.assertEquals;
 
 public class CalculatorProgramTest {
@@ -18,7 +15,7 @@ public class CalculatorProgramTest {
 
     @Test
     public void testEvaluateExpression() {
-        Stack<Integer> stack = new ArrayListStack<>();
+        UVGStack<Integer> stack = new ArrayListStack<>();
         List<Integer> list = new SinglyLinkedList<>();
         Calculator calculator = new Calculator();
 
